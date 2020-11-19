@@ -6,10 +6,15 @@ const record = [
 
 function superbowlWin(recordArray)
 {
-  recordArray.find(function(obj) {
-    if (obj.result === "W")
+  let result = recordArray.find(function(e) {
+    if (e.result === "W")
     {
-      return obj.year;
+      return e.year;
+    }
+    else 
+    {
+      return undefined;
     }
   });
+  return result;
 }
